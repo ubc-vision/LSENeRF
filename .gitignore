@@ -1,0 +1,5 @@
+lsenerf.egg-info/*
+launch.json
+*.pyc
+outputs*
+*.out

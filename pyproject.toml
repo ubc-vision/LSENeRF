@@ -1,0 +1,16 @@
+[project]
+name = "lsenerf"
+version = "0.0.1"
+
+dependencies=[
+    "nerfstudio==0.3.2",
+    "jax[cpu]",
+    "viser==0.0.16",
+    "tyro==0.5.4"
+]
+
+[tool.setuptools.packages.find]
+include = ["lse_nerf*", "lse*"]
+
+[project.entry-points.'nerfstudio.method_configs']
+lsenerf = 'lse_nerf.lse_config:lsenerf_method'
