@@ -10,7 +10,7 @@ implementation of the paper LSENeRF
 python -m pip install torch==2.0.1+cu117 torchvision==0.15.2+cu117 --extra-index-url https://download.pytorch.org/whl/cu117
 python -m pip install -e .
 ```
-1. Reinstall tiny-cuda-nn torch extension from [source](https://github.com/NVlabs/tiny-cuda-nn) with float32 enabled following [here](https://github.com/NVlabs/tiny-cuda-nn/issues/51#issuecomment-1054565404).
+3. Reinstall tiny-cuda-nn torch extension from [source](https://github.com/NVlabs/tiny-cuda-nn) with float32 enabled following [here](https://github.com/NVlabs/tiny-cuda-nn/issues/51#issuecomment-1054565404).
 
 
 # Training
