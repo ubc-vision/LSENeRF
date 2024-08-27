@@ -28,7 +28,7 @@ ns-train lsenerf -h
 ```
 
 # Evaluation
-These script run camera optimization before evaluation. To evaluate non-emb methods, update the experiment path. The example path should give a sense of what to put down. To evaludate, do:
+These script run camera optimization before evaluation. Please update the experiment path before running. The example path in each script should give a sense of what to put down. To evaluate non-emb methods, do:
 ```
 bash scripts/eval.sh
 ```
