@@ -1,6 +1,8 @@
 # LSENeRF
 implementation of the paper LSENeRF
 
+[paper]() | [webpage](https://ubc-vision.github.io/LSENeRF/) | [data](https://github.com/ubc-vision/LSENeRF-data-formatter)
+
 # Setup
 1. Create an environment with python=3.8 or from environment.yml
 2. Install with the below:
