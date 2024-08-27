@@ -84,7 +84,6 @@ class LSENeRFPipeline(VanillaPipeline):
         # NOTE revert to commented version if model fails to load
         # num_embd = len(self.datamanager.train_dataset) if not hasattr(self.datamanager, "num_embd") else self.datamanager.num_embd
         num_embd = self.datamanager.get_num_emb(config.model.embed_config.embedding_type)
-        bin_size = self.datamanager.col_dataparser.get_bin_size() 
         self.datamanager.param_to_pipeline_config(config)
         self._model: LSENeRFModel = config.model.setup(
             scene_box=self.datamanager.train_dataset.scene_box,

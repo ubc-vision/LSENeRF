@@ -455,8 +455,6 @@ class Color(CameraParser):
     def get_num_train(self):
         return len(self.dataset_meta[self.split_dic["train"]])
     
-    def get_bin_size(self):
-        return self.appearance_ids[2] - self.appearance_ids[1]
     
     def get_train_ids(self):
         return sorted(int(e) for e in self.dataset_meta["train_ids"] if int(e) < len(self.all_img_fs) - 1)

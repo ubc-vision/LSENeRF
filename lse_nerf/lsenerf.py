@@ -165,10 +165,6 @@ class LSENeRFModel(NGPModel):
         else:
             scene_contraction = SceneContraction(order=float("inf"))
 
-        # NOTE: gives n_evs/n_rgb ratio; useful for initializing seperate embeddings
-        if self.kwargs.get("bin_size") is not None:
-            self.config.embed_config.set_binsize(self.kwargs["bin_size"])
-
         self.field = LSEField(
             aabb=self.scene_box.aabb,
             num_images=self.num_train_data,

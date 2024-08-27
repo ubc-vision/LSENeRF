@@ -17,7 +17,7 @@ from lse_nerf.utils import gbconfig
 
 # treat this as a abstract class
 class EvsFrameEmbedding(Embedding):
-    def __init__(self, config, num_imgs, num_dims, n_bins) -> None:
+    def __init__(self, config, num_imgs, num_dims) -> None:
         self.config = config
 
         super().__init__(num_imgs, self.config.emb_dim)
@@ -85,8 +85,8 @@ class EvsFrameEmbedding(Embedding):
 
 
 class GlobalEmbedding(EvsFrameEmbedding):
-    def __init__(self, config, num_imgs, num_dims, n_bins=None) -> None:
-        super().__init__(config, 1, num_dims, n_bins)
+    def __init__(self, config, num_imgs, num_dims) -> None:
+        super().__init__(config, 1, num_dims)
     
     def forward(self, x:RaySamples):
         idxs = x.camera_indices * 0
@@ -106,9 +106,7 @@ EMBEDDING_TYPE_DICT = {"global_emb": GlobalEmbedding,
 class LSEEmbeddingConfig(InstantiateConfig):
     _target: Type = field(default_factory=lambda: GlobalEmbedding)
     embedding_type: str = "global_emb"
-    n_bins: int = 1
     metadata:  str = "dummy"
-    skip_base: str = "evs_emb"
 
     emb_dim:int = 32
     """dimension of embedding; PLEASE CONFIGURE IT HERE"""
@@ -117,8 +115,4 @@ class LSEEmbeddingConfig(InstantiateConfig):
 
     def setup(self, **kwargs):
         _target = EMBEDDING_TYPE_DICT[self.embedding_type.lower()]
-        # return super().setup(n_bins=self.n_bins, **kwargs)
-        return _target(self, n_bins=self.n_bins, **kwargs)
-
-    def set_binsize(self, size):
-        self.n_bins=size
+        return _target(self, **kwargs)
