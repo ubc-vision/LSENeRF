@@ -81,8 +81,6 @@ class LSENeRFPipeline(VanillaPipeline):
 
         write_git_hash()
 
-        # NOTE revert to commented version if model fails to load
-        # num_embd = len(self.datamanager.train_dataset) if not hasattr(self.datamanager, "num_embd") else self.datamanager.num_embd
         num_embd = self.datamanager.get_num_emb(config.model.embed_config.embedding_type)
         self.datamanager.param_to_pipeline_config(config)
         self._model: LSENeRFModel = config.model.setup(
@@ -90,8 +88,7 @@ class LSENeRFPipeline(VanillaPipeline):
             num_train_data=num_embd,
             metadata=self.datamanager.train_dataset.metadata,
             device=device,
-            grad_scaler=grad_scaler,
-            bin_size=bin_size
+            grad_scaler=grad_scaler
         )
         self.model.to(device)
 
