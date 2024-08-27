@@ -12,7 +12,7 @@ python -m pip install -e .
 
 
 # Training
-Refert to [data repo]() to format either a EVIMOv2 or LSENeRF scene. To train a model, update the `--data` in the training script and run them:
+Refer to [data repo]() to format either a EVIMOv2 or LSENeRF scene. To train a model, update the `--data` in the training script and run them:
 ```bash
 # to train a LSENeRF scene
 bash scripts/train_lse_data.sh
