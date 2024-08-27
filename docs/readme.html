@@ -1,0 +1,479 @@
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./resources/css/bulma.min.css" />
+    <link rel="stylesheet" href="./resources/css/slide.css" />
+    <link rel="stylesheet" href="./resources/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="./resources/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="./resources/css/fontawesome.all.min.css" />
+    <link rel="stylesheet" href="./resources/css/carasoul.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <link rel="stylesheet" href="./resources/css/index.css" />
+    <link rel="icon" href="./resources/images/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/css/style.css"
+      media="screen"
+    />
+    <link rel="stylesheet" href="resources/css/dics.original.css" />
+
+    <title>LSE-NeRF: Learning Sensor Modeling Errors for Deblured Neural&nbsp;Radiance Fields with RGB-Event Stereo</title>
+    <meta
+      property="og:title"
+      content="LSE-NeRF: Learning Sensor Modeling Errors for Deblured Neural Radiance Fields with RGB-Event Stereo"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      body {
+        text-align: center;
+        background-color: #f0f0f0; /* Optional: Set a background color for better visibility */
+      }
+      .larger-arrow {
+        font-size: 2em; /* Adjust the font size as needed */
+        letter-spacing: 4em; /* Adjust the letter spacing as needed */
+        display: inline-block; /* Ensures text-align works */
+      }
+      .tbl_video {
+        margin-bottom: 40px;
+      }
+    </style>
+    <script src="resources/js/video_comparison.js"></script>
+    <script src="resources/js/dics.original.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        LSE-NeRF: Learning Sensor Modeling Errors for Deblured Neural Radiance Fields with RGB-Event Stereo
+      </div>
+
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <div class="is-size-5 publication-authors">
+             
+            </div> 
+
+            <div class="is-size-5 publication-authors">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="publication-links">
+          <!-- Paper Link. -->
+          <span class="link-block">
+            <a
+              href="PLACEHOLDER, GOES NOWHERE"
+              class="external-link button is-normal is-rounded is-dark"
+            >
+              <span class="icon">
+                <i class="fa fa-file-o"></i>
+              </span>
+              <span>Paper</span>
+            </a>
+          </span>
+          
+          <!-- Code Link. -->
+          <span class="link-block">
+            <a
+              href="https://github.com/ubc-vision/LSENeRF"
+              class="external-link button is-normal is-rounded is-dark"
+            >
+              <span class="icon">
+                <svg
+                  class="svg-inline--fa fa-github fa-w-16"
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fab"
+                  data-icon="github"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 496 512"
+                  data-fa-i2svg=""
+                >
+                  <path
+                    fill="currentColor"
+                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                  ></path></svg>
+              </span>
+              <span>Code</span>
+            </a>
+          </span>
+          <span class="link-block">
+            <a
+              href="https://github.com/ubc-vision/LSENeRF-data-formatter"
+              class="external-link button is-normal is-rounded is-dark"
+            >
+              <span class="icon">
+              <span class="icon">
+                <i class="fa fa-database"></i>
+              </span>
+              </span>
+              <span>Data</span>
+            </a>
+          </span>
+        </div>
+      </div>
+      
+      <hr />
+
+      <div class="parent-video-compare-container" id="trainb">
+        <div class="video-compare-container" id="materialsDiv">
+          <video
+            class="video"
+            id="materials"
+            loop
+            playsinline
+            autoplay
+            muted
+            src="resources/exp_vid/teddy_compare.mp4"
+            onplay="resizeAndPlay(this)"
+          ></video>
+          <canvas height="0" class="videoMerge" id="materialsMerge"></canvas>
+        </div>
+        <br>
+        <p class="justified" style="text-align: center;">
+          Novel view reconstructions for 
+          <strong>(left) our method </strong> and <strong>(right) BAD NeRF [25] </strong>.
+        </p>
+        
+      </div>
+
+      <script>
+        function isSafari() {
+          return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        }
+        if (isSafari()) {
+           document.getElementById('trainb').innerHTML =
+             `<strong style="color: black; font-size: 18;">This local project page is best viewed in Google Chrome. Safari is not supported. The javascript-based slider below will show up as a side-by-side video. </strong>
+             <br>
+             <br>
+             <video class="safari-video" controls autoplay loop>
+               <source src="resources/exp_vid/teddy_compare.mp4" type="video/mp4" >
+             </video>
+             <p class="justified" style="text-align: center;">
+                 Novel view reconstructions for 
+                 <strong>(left) our method </strong> and <strong>(right) BAD NeRF [25] </strong>.
+             </p>`;
+        }
+      </script>
+
+      <!-- <div class="parent-video-compare-container">
+        <hr />
+      </div> -->
+      <hr />
+
+      <h1>Abstract</h1>
+      <div class="parent-video-compare-container">
+        <p class="justified">
+          We present a method for reconstructing a clear Neural Radiance Field (NeRF) even with fast camera motions. 
+To address blur artifacts, we leverage both (blurry) RGB images and event camera data captured in a binocular configuration. 
+Importantly, when reconstructing our clear NeRF, we consider the camera modeling imperfections that arise from the simple pinhole camera model as learned embeddings for each camera measurement, and further learn a mapper that connects event camera measurements with RGB data.
+As no previous dataset exists for our binocular setting, we introduce an event camera dataset with captures from a 3D-printed stereo configuration between RGB and event cameras.
+Empirically, we evaluate on our introduced dataset and EVIMOv2 and show that our method leads to improved reconstructions.
+We are committed to making our code and dataset public.
+        </p>
+      </div>
+
+      <!-- <div class="parent-video-compare-container">
+        <hr />
+      </div> -->
+      <hr />
+      
+      
+
+      <h1>More Results</h1>
+
+      <div class="parent-video-compare-container">
+        <table class="tbl_video" style="width:100%;">
+          <tr>
+            <td colspan="4" style="background-color: #d1c4ce; font-size: 20px">
+              'Bag' scene (Outdoors)
+            </td>
+          </tr>
+          <tr>
+            <td width="50%" style="font-size: 18px">BADNeRF</td>
+            <td width="50%" style="font-size: 18px">BADNeRF + <strong>Our Embeddings</strong></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <video
+                class="kitti360"
+                id="video1"
+                width="95%"
+                preload="auto"
+                playsinline
+                webkit-playsinline
+                loop
+                autoplay
+                muted
+              >
+                <source src="resources/exp_vid/Bag.mp4" type="video/mp4" />
+              </video>
+            </td>
+          </tr>
+          <tr>
+            <td width="50%" style="font-size: 18px">E2NeRF</td>
+            <td width="50%" style="font-size: 18px; font-weight: bold;">Our Method</td>
+          </tr>
+        </table>
+        
+        <!-- Closing the first table and starting the next one -->
+        
+        <table class="tbl_video" style="width:100%;">
+          <tr>
+            <td colspan="4" style="background-color: #d1c4ce; font-size: 20px">
+              'Dragon Max' Scene (Indoors)
+            </td>
+          </tr>
+          <tr>
+            <td width="50%" style="font-size: 18px">BADNeRF</td>
+            <td width="50%" style="font-size: 18px">BADNeRF + <strong>Our Embeddings</strong></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <video
+                class="kitti360"
+                id="video2"
+                width="95%"
+                preload="auto"
+                playsinline
+                webkit-playsinline
+                loop
+                autoplay
+                muted
+              >
+                <source src="resources/exp_vid/Dragon_Max.mp4" type="video/mp4" />
+              </video>
+            </td>
+          </tr>
+          <tr>
+            <td width="50%" style="font-size: 18px">E2NeRF</td>
+            <td width="50%" style="font-size: 18px; font-weight: bold;">Our Method</td>
+          </tr>
+        </table>
+
+
+      </div>
+
+      <hr />
+
+      <h1>Collected Dataset</h1>
+      <div class="parent-video-compare-container">
+        <p class="justified">
+        We visualize the first 50 and last 50 frames for some scenes in our collected dataset. The left is the blurry RGB and the right
+        is the event camera data. The green dots are the triangulated 3D points.
+        </p>
+      </div>
+      
+      <div class="parent-video-compare-container">
+        <table class="tbl_video" style="width:100%;">
+          <tr>
+            <td colspan="4" style="background-color: #d1c4ce; font-size: 20px">
+              'Courtyard' scene (Outdoors)
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <video
+              id="myVideo"
+              width="80%"
+              preload="metadata"
+              playsinline
+              webkit-playsinline
+              loop
+              muted
+              controls
+            >
+                <source src="resources/dataset_vid/courtyard1_v10_t1_proj.mp4" type="video/mp4" />
+              </video>
+                <!-- Playback Speed Controls -->
+                <div style="margin-top: 10px;">
+                  <label for="playbackRate"><strong>Playback Speed:</strong></label>
+                  <select id="playbackRate">
+                    <option value="0.25">0.25x</option>
+                    <option value="0.5">0.5x</option>
+                    <option value="0.75">0.75x</option>
+                    <option value="1" selected>Normal</option>
+                  </select>
+                </div>
+
+              <script>
+                // Get the video element and the playback speed selector
+                const video = document.getElementById('myVideo');
+                const playbackRateSelector = document.getElementById('playbackRate');
+
+                // Change the playback rate when the selector value changes
+                playbackRateSelector.addEventListener('change', function() {
+                  video.playbackRate = parseFloat(this.value);
+                });
+              </script>
+
+            </td>
+          </tr>
+        </table>
+        
+      </div>
+
+      <div class="parent-video-compare-container">
+        <table class="tbl_video" style="width:100%;">
+          <tr>
+            <td colspan="4" style="background-color: #d1c4ce; font-size: 20px">
+              'Bicycle' scene (Outdoors)
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <video
+              id="bicycle"
+              width="80%"
+              preload="auto"
+              playsinline
+              webkit-playsinline
+              loop
+              muted
+              controls
+            >
+                <source src="resources/dataset_vid/bc_proj.mp4" type="video/mp4" />
+              </video>
+                <!-- Playback Speed Controls -->
+                <div style="margin-top: 10px;">
+                  <label for="playbackRate2"><strong>Playback Speed:</strong></label>
+                  <select id="playbackRate2">
+                    <option value="0.25">0.25x</option>
+                    <option value="0.5">0.5x</option>
+                    <option value="0.75">0.75x</option>
+                    <option value="1" selected>Normal</option>
+                  </select>
+                </div>
+
+              <script>
+                // Get the video element and the playback speed selector
+                const video2 = document.getElementById('bicycle');
+                const playbackRateSelector2 = document.getElementById('playbackRate2');
+
+                // Change the playback rate when the selector value changes
+                playbackRateSelector2.addEventListener('change', function() {
+                  video2.playbackRate = parseFloat(this.value);
+                });
+              </script>
+
+            </td>
+          </tr>
+        </table>
+        
+      </div>
+
+      <div class="parent-video-compare-container">
+        <table class="tbl_video" style="width:100%;">
+          <tr>
+            <td colspan="4" style="background-color: #d1c4ce; font-size: 20px">
+              'Grad Lounge' scene (Indoors)
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <video
+              id="mimi1"
+              width="80%"
+              preload="auto"
+              playsinline
+              webkit-playsinline
+              loop
+              muted
+              controls
+            >
+                <source src="resources/dataset_vid/mimi1_proj.mp4" type="video/mp4" />
+              </video>
+                <!-- Playback Speed Controls -->
+                <div style="margin-top: 10px;">
+                  <label for="playbackRate3"><strong>Playback Speed:</strong></label>
+                  <select id="playbackRate3">
+                    <option value="0.25">0.25x</option>
+                    <option value="0.5">0.5x</option>
+                    <option value="0.75">0.75x</option>
+                    <option value="1" selected>Normal</option>
+                  </select>
+                </div>
+
+              <script>
+                // Get the video element and the playback speed selector
+                const video3 = document.getElementById('mimi1');
+                const playbackRateSelector3 = document.getElementById('playbackRate3');
+
+                // Change the playback rate when the selector value changes
+                playbackRateSelector3.addEventListener('change', function() {
+                  video3.playbackRate = parseFloat(this.value);
+                });
+              </script>
+
+            </td>
+          </tr>
+        </table>
+        
+      </div>
+
+      <div class="parent-video-compare-container">
+        <table class="tbl_video" style="width:100%;">
+          <tr>
+            <td colspan="4" style="background-color: #d1c4ce; font-size: 20px">
+              'Teddy Grass' scene ('Indoors')
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <video
+              id="teddyGrass"
+              width="80%"
+              preload="auto"
+              playsinline
+              webkit-playsinline
+              loop
+              muted
+              controls
+            >
+                <source src="resources/dataset_vid/teddy_grass_v9_c2_proj.mp4" type="video/mp4" />
+              </video>
+                <!-- Playback Speed Controls -->
+                <div style="margin-top: 10px;">
+                  <label for="playbackRate4"><strong>Playback Speed:</strong></label>
+                  <select id="playbackRate4">
+                    <option value="0.25">0.25x</option>
+                    <option value="0.5">0.5x</option>
+                    <option value="0.75">0.75x</option>
+                    <option value="1" selected>Normal</option>
+                  </select>
+                </div>
+
+              <script>
+                // Get the video element and the playback speed selector
+                const video4 = document.getElementById('teddyGrass');
+                const playbackRateSelector4 = document.getElementById('playbackRate4');
+
+                // Change the playback rate when the selector value changes
+                playbackRateSelector4.addEventListener('change', function() {
+                  video4.playbackRate = parseFloat(this.value);
+                });
+              </script>
+
+            </td>
+          </tr>
+        </table>
+        
+      </div>
+      
+      
+      
+    </div>
+  </body>
+</html>
