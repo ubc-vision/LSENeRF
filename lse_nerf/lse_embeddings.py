@@ -14,8 +14,6 @@ from lse_nerf.lse_cameras import HardCamType
 from lse_nerf.data_components import find_closest_idxs, find_closest_idxs_exclu
 from lse_nerf.utils import gbconfig
 
-def none_embedding(config=None, num_imgs = None, num_dims = None, n_bins=None):
-    return None
 
 # treat this as a abstract class
 class EvsFrameEmbedding(Embedding):
@@ -31,32 +29,13 @@ class EvsFrameEmbedding(Embedding):
         self.test_emb = None
         self.get_eval_emb_fn = self.eval_emb_fn_dict[self.config.eval_mode]
 
-        self.rgb_cache = None
-        self.evs_cache = []
 
         if gbconfig.IS_EVAL and not gbconfig.DO_PRETRAIN:
             self.init_test_params()
 
-    def cache_ids(self, x: RaySamples):
-        if x.metadata is None or x.metadata.get("cam_type") is None:
-            return
-        
-        appearance_ids = x.metadata["appearance_id"]
-        if x.metadata["cam_type"][0] == HardCamType.RGB:
-            self.rgb_cache = appearance_ids
-            return
-
-        if x.metadata["cam_type"][0] == HardCamType.EVS:
-            if len(self.evs_cache) != 2:
-                self.evs_cache = self.evs_cache + [appearance_ids]
-            else:
-                del self.evs_cache
-                self.evs_cache = [appearance_ids]
-
     
     ## MUST IMPLEMENT
     def forward(self, x: RaySamples, call_from_test=False):
-        self.cache_ids(x)
         if gbconfig.IS_EVAL and not call_from_test:
             return self.get_test_emb(x)
 
@@ -119,8 +98,7 @@ class GlobalEmbedding(EvsFrameEmbedding):
 
 
 
-EMBEDDING_TYPE_DICT = {"none_emb": none_embedding,
-                       "global_emb": GlobalEmbedding,
+EMBEDDING_TYPE_DICT = {"global_emb": GlobalEmbedding,
                        "evs_emb": EvsFrameEmbedding,}
 
 
