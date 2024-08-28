@@ -22,8 +22,6 @@ class EvsFrameEmbedding(Embedding):
 
         super().__init__(num_imgs, self.config.emb_dim)
         self.eval_emb_fn_dict = {"zero": self.get_zero_emb,
-                                 "first": self.get_first_emb,
-                                 "opt": self.get_opt_emb,
                                  "mean": self.get_mean_emb,
                                  "param": self.get_test_param_emb}
         self.test_emb = None
@@ -45,15 +43,6 @@ class EvsFrameEmbedding(Embedding):
     ## MUST IMPLEMENT
     def get_test_emb(self, x:RaySamples):
         return self.get_eval_emb_fn(x)
-    
-    def get_first_emb(self, x:RaySamples):
-        idxs = x.metadata["appearance_id"]
-        idxs[:] = 3
-        return Embedding.forward(self, idxs)
-
-    def get_opt_emb(self, x:RaySamples):
-        idxs = x.metadata["appearance_id"]
-        return Embedding.forward(self, idxs)
     
     def get_mean_emb(self, x:RaySamples):
         return torch.ones((len(x), self.out_dim), device = x.frustums.directions.device) * self.mean(dim=0)
