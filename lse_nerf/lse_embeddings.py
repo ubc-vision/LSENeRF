@@ -100,7 +100,7 @@ class LSEEmbeddingConfig(InstantiateConfig):
     emb_dim:int = 32
     """dimension of embedding; PLEASE CONFIGURE IT HERE"""
 
-    eval_mode: Literal["zero", "first", "opt", "mean"] = "zero"
+    eval_mode: Literal["zero", "mean"] = "zero"
 
     def setup(self, **kwargs):
         _target = EMBEDDING_TYPE_DICT[self.embedding_type.lower()]
