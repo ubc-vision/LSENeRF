@@ -11,7 +11,10 @@ python train.py lsenerf --max-num-iterations $((6000 + 10)) \
                         --load-dir  "$EXP_PATH/nerfstudio_models" \
                         --load-config "$EXP_PATH/config.yml" \
                         --is_eval True \
-                        --emb_eval_mode first \
+                        --emb_eval_mode zero \
                         --pipeline.datamanager.col-dataparser.image-type clear \
                         --pipeline.datamanager.col-dataparser.quality "" \
                         --pipeline.model.eval-num-rays-per-chunk 128 
+
+# NOTE:
+# Global emb always return the same embedding regardless of --emb_eval_mode
