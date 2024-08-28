@@ -18,7 +18,7 @@ import os
 class LSETranerConfig(TrainerConfig):
     _target: Type = field(default_factory=lambda: LSETrainer)
     is_eval: bool = False
-    emb_eval_mode: Literal["zero", "first", "opt", "mean", "param"] = "zero"
+    emb_eval_mode: Literal["zero", "mean", "param"] = "zero"
     do_pretrain: bool = False
     is_render: bool = False
 
