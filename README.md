@@ -22,7 +22,7 @@ bash scripts/train_lse_data.sh
 # to train a EVIMOv2 scene
 bash scripts/train_evimo.sh
 ```
-You can choose which method to run by change the configurations at the top of the *train_evimo.sh* and *train_lse_data.sh*.
+You can choose which method to run by changing the configurations at the top of the *train_evimo.sh* and *train_lse_data.sh*.
 
 To see all available parameters do:
 ```bash
@@ -30,12 +30,12 @@ ns-train lsenerf -h
 ```
 
 # Evaluation
-These script run camera optimization before evaluation. Please update the experiment path before running. The example path in each script should give a sense of what to put down. To evaluate non-emb methods, do:
+These scripts run camera optimization before evaluation. Please update the experiment path before running. The example path in each script should give a sense of what to put down. To evaluate a non-embedding method, do:
 ```
 bash scripts/eval.sh
 ```
 
-To evaluate a embedding method do, update the experiment path and do:
+To evaluate an embedding method do:
 ```
 bash scripts/emb_eval.sh
 ```
