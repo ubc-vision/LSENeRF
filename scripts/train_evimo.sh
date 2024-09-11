@@ -15,7 +15,7 @@ rgb_loss_fn=deblur
 ## event loss weight
 evs_w=1.0
 
-## camera optimization on of [off, SO3xR3]
+## camera optimization one of [off, SO3xR3]
 col_cam_opt=SO3xR3
 evs_cam_opt=SO3xR3
 
